@@ -1,0 +1,20 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: spring-cloud-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: path_route
+          uri: http://cxytiandi.com
+          predicates:
+            - Path=/course
+        - id: path2_route
+          uri: http://cxytiandi.com
+          predicates:
+              - Path=/article
+        - id: path3_route
+          uri: http://cxytiandi.com
+          predicates:
+            - Path=/blog/**

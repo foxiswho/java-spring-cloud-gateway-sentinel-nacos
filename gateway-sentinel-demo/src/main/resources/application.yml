@@ -1,0 +1,24 @@
+
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: path_route
+          uri: https://github.com
+          predicates:
+            - Path=/github
+        - id: path2_route
+          uri: http://github.com
+          predicates:
+              - Path=/article
+        - id: path3_route
+          uri: http://github.com
+          predicates:
+            - Path=/blog/**
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
