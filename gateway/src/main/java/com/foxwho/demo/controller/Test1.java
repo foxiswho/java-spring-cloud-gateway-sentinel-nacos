@@ -1,5 +1,6 @@
 package com.foxwho.demo.controller;
 
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,6 +15,11 @@ public class Test1 {
 
     @RequestMapping("/oms/api/order/create")
     public String create() {
-        return "path:/oms/api/order/create";
+        return "GET:/oms/api/order/create";
+    }
+
+    @PostMapping("/oms/api/order/create")
+    public String postOrder() {
+        return "POST:/oms/api/order/create";
     }
 }
