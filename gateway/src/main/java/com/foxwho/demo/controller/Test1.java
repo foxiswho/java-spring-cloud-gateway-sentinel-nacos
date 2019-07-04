@@ -11,4 +11,9 @@ public class Test1 {
     public String test() {
         return "这是使用控制台方式";
     }
+
+    @RequestMapping("/oms/api/order/create")
+    public String create() {
+        return "path:/oms/api/order/create";
+    }
 }
